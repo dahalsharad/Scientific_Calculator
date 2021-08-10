@@ -526,7 +526,7 @@ QPushButton:pressed {
      <string>Simple</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pbComp">
+   <widget class="QPushButton" name="pbSpecial">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -552,7 +552,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>Complex</string>
+     <string>Special Functions</string>
     </property>
    </widget>
    <widget class="QWidget" name="Complex" native="true">
