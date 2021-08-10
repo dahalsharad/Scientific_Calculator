@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>             // to replace std::cout
+#include <QDebug>
+#include <math.h>
 
 
 double firstNum;
@@ -15,9 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);               // this is all in the constructor
-
-    connect(ui->pb0,SIGNAL(released()),this,SLOT(digit_pressed()));  // associate a button press with calling that slot
+    ui->setupUi(this);
+    connect(ui->pb0,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb1,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb2,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb3,SIGNAL(released()),this,SLOT(digit_pressed()));
@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pb8,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb9,SIGNAL(released()),this,SLOT(digit_pressed()));
 
-    connect(ui->pbPosNeg,SIGNAL(released()),this,SLOT(unary_operation_pressed()));  // connect to method
+    connect(ui->pbPosNeg,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
     connect(ui->pbRoot,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
 
     connect(ui->pbSum,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
@@ -59,12 +59,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pbSub->setCheckable(true);
     ui->pbMult->setCheckable(true);
     ui->pbDiv->setCheckable(true);
+    ui->pbnroot->setCheckable(true);
+    ui->pbxn->setCheckable(true);
 
-    CreateSimpleCalcWidget();
-    CreateComplexCalcWidget();
+    CreateCalculatorWidget();
 }
 
-void MainWindow::CreateSimpleCalcWidget()
+void MainWindow::CreateCalculatorWidget()
 {
     if (simplemode)
     {
@@ -72,18 +73,19 @@ void MainWindow::CreateSimpleCalcWidget()
         setMinimumSize(302, 363);
         setMaximumSize(302, 363);
         simplemode = false;
+        complexmode = true;
         ui->label->resize(301,61);
+        ui->pbSimp->setText("Complex");
     }
-}
-void MainWindow::CreateComplexCalcWidget()
-{
-    if (complexmode)
+    else if (complexmode)
     {
         ui->Complex->show();
         setMinimumSize(484, 363);
         setMaximumSize(484, 363);
         complexmode = false;
+        simplemode = true;
         ui->label->resize(484,61);
+        ui->pbSimp->setText("Simple");
     }
 
 }
@@ -100,7 +102,7 @@ void MainWindow::digit_pressed()
     double labelNumber;
     QString newLabel;
 
-    if((ui->pbSum->isChecked() || ui->pbSub->isChecked() || ui->pbMult->isChecked() || ui->pbDiv->isChecked())
+    if((ui->pbSum->isChecked() || ui->pbSub->isChecked() || ui->pbMult->isChecked() || ui->pbDiv->isChecked() || ui->pbxn->isChecked() || ui->pbnroot->isChecked())
         && (!userIsTypingSecondNumber))
     {
         labelNumber = ( button->text()).toDouble();
@@ -218,7 +220,20 @@ void MainWindow::on_pbEql_released()
         ui->label->setText(newLabel);
         ui->pbDiv->setChecked(false);
     }
-
+    else if(ui->pbxn->isChecked())
+    {
+        labelNumber = pow(firstNum, secondNum);
+        newLabel = QString::number(labelNumber, 'g', 15);
+        ui->label->setText(newLabel);
+        ui->pbxn->setChecked(false);
+    }
+    else if(ui->pbnroot->isChecked())
+    {
+        labelNumber = pow(firstNum, (1/secondNum));
+        newLabel = QString::number(labelNumber, 'g', 15);
+        ui->label->setText(newLabel);
+        ui->pbnroot->setChecked(false);
+    }
     userIsTypingSecondNumber = false;
 
 }
@@ -312,6 +327,12 @@ void MainWindow::power_released()
       }
     else if (button->text() == "x^n")
     {
+        firstNum = ui->label->text().toDouble();
+        newLabel = ui->label->text() + " x^n n= ";
+        ui->label->setText(newLabel);
+        button->setChecked(true);
+
+
      }
    }
 void MainWindow::logarithmic_released()
@@ -357,22 +378,60 @@ void MainWindow::roots_released()
     else if (button->text() == "n√")
     {
 
-    }
+            firstNum = ui->label->text().toDouble();
+            newLabel = ui->label->text() + " n√ n= ";
+            ui->label->setText(newLabel);
+            button->setChecked(true);
 
+    }
 }
 
 
 
 void MainWindow::on_pbSimp_released()
 {
-    simplemode = true;
-    CreateSimpleCalcWidget();
+    CreateCalculatorWidget();
 }
 
 
-void MainWindow::on_pbComp_released()
+
+void MainWindow::on_pbPie_released()
 {
-    complexmode = true;
-    CreateComplexCalcWidget();
+      QString newLabel,oldLabel;
+      oldLabel = newLabel = ui->label->text();
+      if (oldLabel=="0")
+      {
+          newLabel = "3.14159";
+          ui->label->setText(newLabel);
+      }
+      else
+      {
+          newLabel = ui->label->text() + "3.14159";
+          ui->label->setText(newLabel);
+
+      }
+
+}
+
+
+void MainWindow::on_pbDel_released() //deletes last character if it is present but doesnt delete initial 0
+{
+    QString Labeltext;
+    Labeltext = ui->label->text();
+    if (Labeltext != "0") //only works if labeltext is not zero
+    {
+        if (Labeltext.size () > 0)  Labeltext.resize (Labeltext.size () - 1);//label text size must be atleast 1
+        ui->label->setText(Labeltext);
+        if (Labeltext == "") ui->label->setText("0");//if all digits are zero set text 0
+     }
+}
+
+
+void MainWindow::on_pbSpecial_released()
+{
+  special = new Special(this);
+  special->show();
+
+
 }
 

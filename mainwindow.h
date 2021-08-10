@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "special.h"
 
 namespace Ui
 {
@@ -19,8 +20,9 @@ class MainWindow : public QMainWindow
     private:
         Ui::MainWindow *ui;
 
-        void CreateSimpleCalcWidget();
-        void CreateComplexCalcWidget();
+        void CreateCalculatorWidget();
+        Special *special;
+
 
     private slots:
         void digit_pressed();    // slot is code that executes when signal is emitted
@@ -38,6 +40,9 @@ class MainWindow : public QMainWindow
 
         void on_pbSimp_released();
         void on_pbComp_released();
+        void on_pbPie_released();
+        void on_pbDel_released();
+        void on_pbSpecial_released();
 };
 
 #endif // MAINWINDOW_H
