@@ -15,6 +15,9 @@ public:
     explicit Special(QWidget *parent = nullptr);
     ~Special();
 
+private slots:
+    void on_pushButton_5_released();
+
 private:
     Ui::Special *ui;
 };

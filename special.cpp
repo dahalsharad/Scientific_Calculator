@@ -12,3 +12,10 @@ Special::~Special()
 {
     delete ui;
 }
+
+void Special::on_pushButton_5_released()//for universal constants
+{
+    Special::close();//to close current box
+
+}
+
