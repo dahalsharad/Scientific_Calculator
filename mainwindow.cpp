@@ -424,9 +424,8 @@ void MainWindow::on_pbDel_released() //deletes last character if it is present b
         ui->label->setText(Labeltext);
         if (Labeltext == "") ui->label->setText("0");//if all digits are zero set text 0
      }
+
 }
-
-
 void MainWindow::on_pbSpecial_released()
 {
   special = new Special(this);
