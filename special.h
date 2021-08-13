@@ -2,6 +2,7 @@
 #define SPECIAL_H
 
 #include <QDialog>
+#include "uc.h"
 
 namespace Ui {
 class Special;
@@ -17,9 +18,12 @@ public:
 
 private slots:
     void on_pushButton_5_released();
+    void on_pushButton_1_released();
 
 private:
     Ui::Special *ui;
+    //void CreateCalculatorWidget();
+    uc *UC;
 };
 
 #endif // SPECIAL_H

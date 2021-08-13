@@ -55,6 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pb3rootn,SIGNAL(released()),this,SLOT(roots_released()));
     connect(ui->pbnroot,SIGNAL(released()),this,SLOT(roots_released()));
 
+
     ui->pbSum->setCheckable(true);
     ui->pbSub->setCheckable(true);
     ui->pbMult->setCheckable(true);
@@ -430,7 +431,6 @@ void MainWindow::on_pbSpecial_released()
 {
   special = new Special(this);
   special->show();
-
-
 }
+
 

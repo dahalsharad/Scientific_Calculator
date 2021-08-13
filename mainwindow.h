@@ -39,7 +39,6 @@ class MainWindow : public QMainWindow
         void roots_released();
 
         void on_pbSimp_released();
-        void on_pbComp_released();
         void on_pbPie_released();
         void on_pbDel_released();
         void on_pbSpecial_released();
