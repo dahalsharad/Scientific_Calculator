@@ -592,7 +592,7 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>ch</string>
+      <string>Cosh</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pbTan">
@@ -768,7 +768,7 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>sh</string>
+      <string>Sinh</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pbln">
@@ -812,7 +812,7 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>th</string>
+      <string>Tanh</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pbxn">

@@ -27,14 +27,17 @@ SOURCES += \
         constants.cpp \
         main.cpp \
         mainwindow.cpp \
-        special.cpp
+        special.cpp \
+        uc.cpp
 
 HEADERS += \
         constants.h \
         mainwindow.h \
-        special.h
+        special.h \
+        uc.h
 
 FORMS += \
         constants.ui \
         mainwindow.ui \
-        special.ui
+        special.ui \
+        uc.ui

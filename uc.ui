@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Special</class>
- <widget class="QDialog" name="Special">
+ <class>uc</class>
+ <widget class="QDialog" name="uc">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,9 +16,9 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>310</y>
-     <width>161</width>
+     <width>341</width>
      <height>32</height>
     </rect>
    </property>
@@ -29,82 +29,82 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pbuc">
+  <widget class="QPushButton" name="length">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
-     <width>171</width>
-     <height>30</height>
+     <y>20</y>
+     <width>93</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Converter</string>
+    <string>Length</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>190</y>
-     <width>171</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Complex</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>150</y>
-     <width>171</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Equations</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>110</y>
-     <width>171</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Vector</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="mass">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>60</y>
-     <width>171</width>
-     <height>30</height>
+     <width>93</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Universal Constants</string>
+    <string>Mass</string>
    </property>
   </widget>
-  <widget class="QGroupBox" name="groupBox">
+  <widget class="QPushButton" name="time">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>10</y>
-     <width>120</width>
-     <height>141</height>
+     <x>10</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
     </rect>
    </property>
-   <property name="title">
-    <string>GroupBox</string>
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nosys">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No. System</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="speed">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>60</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Speed</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temperature</string>
    </property>
   </widget>
  </widget>
@@ -113,7 +113,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Special</receiver>
+   <receiver>uc</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -129,7 +129,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Special</receiver>
+   <receiver>uc</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
