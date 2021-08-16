@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>190</y>
+     <y>170</y>
      <width>171</width>
      <height>30</height>
     </rect>
@@ -59,7 +59,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>150</y>
+     <y>130</y>
      <width>171</width>
      <height>30</height>
     </rect>
@@ -72,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>110</y>
+     <y>90</y>
      <width>171</width>
      <height>30</height>
     </rect>
@@ -85,26 +85,13 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>60</y>
+     <y>50</y>
      <width>171</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
     <string>Universal Constants</string>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>10</y>
-     <width>120</width>
-     <height>141</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>GroupBox</string>
    </property>
   </widget>
  </widget>
