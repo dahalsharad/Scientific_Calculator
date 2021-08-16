@@ -17,6 +17,13 @@ public:
 
 private:
     Ui::constants *ui;
+        void mod_window();
+
+private slots:
+
+
+    void on_pba_released();
+    void on_pbb_released();
 };
 
 #endif // CONSTANTS_H
