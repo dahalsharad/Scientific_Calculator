@@ -256,21 +256,21 @@ void MainWindow::hyperbolic_released()
     double labelNumber;
     QString newLabel;
 
-    if (button->text() == "Sinh")
+    if (button->text() == "sh")
     {
         labelNumber = ui->label->text().toDouble();
         labelNumber = std::sinh(labelNumber);
         newLabel = QString::number(labelNumber, 'g', 15);
         ui->label->setText(newLabel);
        }
-    else if (button->text() == "Cosh")
+    else if (button->text() == "ch")
     {
         labelNumber = ui->label->text().toDouble();
         labelNumber = std::cosh(labelNumber);
         newLabel = QString::number(labelNumber, 'g', 15);
         ui->label->setText(newLabel);
     }
-    else if (button->text() == "Tanh")
+    else if (button->text() == "th")
     {
         labelNumber = ui->label->text().toDouble();
         labelNumber = std::tanh(labelNumber);
@@ -286,16 +286,14 @@ void MainWindow::trigonometric_released()
     QString newLabel;
     if (button->text() == "Sin")
     {
-       labelNumber = ui->label->text().toDouble();
-       labelNumber= labelNumber * (M_PI/ 180.0);
-       labelNumber = std::sin(labelNumber);
-       newLabel = QString::number(labelNumber, 'g', 15);
-       ui->label->setText(newLabel);
+        labelNumber = ui->label->text().toDouble();
+        labelNumber = std::sin(labelNumber);
+        newLabel = QString::number(labelNumber, 'g', 15);
+        ui->label->setText(newLabel);
        }
     else if (button->text() == "Cos")
     {
         labelNumber = ui->label->text().toDouble();
-        labelNumber= labelNumber * (M_PI/ 180.0);
         labelNumber = std::cos(labelNumber);
         newLabel = QString::number(labelNumber, 'g', 15);
         ui->label->setText(newLabel);
@@ -303,7 +301,6 @@ void MainWindow::trigonometric_released()
     else if (button->text() == "Tan")
     {
         labelNumber = ui->label->text().toDouble();
-        labelNumber= labelNumber * (M_PI/ 180.0);
         labelNumber = std::tan(labelNumber);
         newLabel = QString::number(labelNumber, 'g', 15);
         ui->label->setText(newLabel);

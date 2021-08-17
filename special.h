@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include "uc.h"
-#include "constants.h"
 
 namespace Ui {
 class Special;
@@ -23,12 +22,8 @@ private slots:
 
 private:
     Ui::Special *ui;
+    //void CreateCalculatorWidget();
     uc *UC;
-    constants *Constants;
-
-
-
-
 };
 
 #endif // SPECIAL_H

@@ -42,7 +42,6 @@ class MainWindow : public QMainWindow
         void on_pbPie_released();
         void on_pbDel_released();
         void on_pbSpecial_released();
-
 };
 
 #endif // MAINWINDOW_H
