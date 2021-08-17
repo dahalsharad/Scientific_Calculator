@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>uc</class>
+ <widget class="QDialog" name="uc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>598</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>320</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="length">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Length</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mass">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mass</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="time">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="numSys">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No. System</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="speed">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>60</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Speed</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="temp">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temperature</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="speed_6">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Speed</string>
+   </property>
+   <widget class="QPushButton" name="Temp_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> km/s - m/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="length_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s - Km/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s - mph</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mph - m/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="speed_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>km/hr - m/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mass_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s - km/hr</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>fps - m/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s - fps</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ips - m/s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s - ips</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="temp_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Temperature</string>
+   </property>
+   <widget class="QPushButton" name="Temp_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>K - °C</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="length_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>°C - K</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>°F - K</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>K - °F</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="speed_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>°F - °C</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mass_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>°C - °F</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="time_12">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Time</string>
+   </property>
+   <widget class="QPushButton" name="Temp_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>min - s</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="length_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>s - min</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hr - day</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_6">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>day - hr</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="speed_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hr - min</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mass_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>min - hr</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_7">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>week - day</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>day - week</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_8">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>year - week</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>week - year</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="mass_6">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Mass</string>
+   </property>
+   <widget class="QPushButton" name="Temp_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg - g</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="length_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>g - kg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg - quintal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_9">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quintal - kg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="speed_5">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>pound - kg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mass_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg - pound</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_10">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ton - quintal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>quintal - ton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="numSys_11">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ounce - g</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>g - ounce</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="length_7">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Length</string>
+   </property>
+   <widget class="QPushButton" name="m_cm">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m - cm</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cm_m">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cm - m</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="km_mile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>km - mile</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mile_km">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mile - km</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="km_m">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>km - m</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_km">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m - km</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="feet_m">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>feet - m</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_feet">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m - feet</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="yard_m">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>yard - m</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_yard">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m - yard</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="noSys">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>10</y>
+     <width>231</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>No System</string>
+   </property>
+   <widget class="QPushButton" name="m_cm_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>bin - dec</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cm_m_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dec - bin</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="km_mile_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>bin - hex</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mile_km_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hex - bin</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="km_m_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>oct - bin</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_km_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>bin - oct</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="feet_m_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>oct - dec</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_feet_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dec - oct</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="yard_m_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hex - dec</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_yard_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dec - hex</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>uc</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>uc</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
