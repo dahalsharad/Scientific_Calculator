@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //digits
     connect(ui->pb0,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb1,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb2,SIGNAL(released()),this,SLOT(digit_pressed()));
@@ -27,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pb7,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb8,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->pb9,SIGNAL(released()),this,SLOT(digit_pressed()));
-
+    //unary
     connect(ui->pbPosNeg,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
     connect(ui->pbRoot,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
 
@@ -94,6 +95,23 @@ void MainWindow::CreateCalculatorWidget()
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+void MainWindow::planks()
+{
+        ui->label->setText("6.62607004 × 10^(-34)");
+}
+
+void MainWindow::constantsSelect()
+{
+    Constants = new constants(this);
+    QObject::connect(Constants, SIGNAL(planks()), this, SLOT(planks()));
+    Constants->show();
+}
+void MainWindow::ucSelect()
+{
+    UC = new uc(this);
+    //QObject::connect(special, SIGNAL(constantsSelect()), this, SLOT(constantsSelect()));//(uc ko lagi)
+    UC->show();
 }
 
 void MainWindow::digit_pressed()
@@ -433,6 +451,8 @@ void MainWindow::on_pbDel_released() //deletes last character if it is present b
 void MainWindow::on_pbSpecial_released()
 {
   special = new Special(this);
+  QObject::connect(special, SIGNAL(constantsSelect()), this, SLOT(constantsSelect()));
+  QObject::connect(special, SIGNAL(ucSelect()), this, SLOT(ucSelect()));
   special->show();
 }
 

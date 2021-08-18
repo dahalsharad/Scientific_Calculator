@@ -15,16 +15,16 @@ Special::~Special()
 {
     delete ui;
 }
-void Special::on_pushButton_1_released()
+void Special::on_pushButton_1_released()//for uc
 {
-  UC = new uc(this);
-  UC->show();
+
+  emit ucSelect();
+    delete this;
 }
 
 void Special::on_pushButton_5_released()//for universal constants
 {
-    Constants = new constants(this);
-    Constants->show();
-
+    emit constantsSelect();
+    delete this;
 }
 

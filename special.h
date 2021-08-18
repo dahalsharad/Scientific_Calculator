@@ -23,8 +23,11 @@ private slots:
 
 private:
     Ui::Special *ui;
-    uc *UC;
-    constants *Constants;
+
+
+signals:
+    void constantsSelect();
+    void ucSelect();
 
 
 

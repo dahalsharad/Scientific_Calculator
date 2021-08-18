@@ -14,6 +14,10 @@ class constants : public QDialog
 public:
     explicit constants(QWidget *parent = nullptr);
     ~constants();
+signals:
+    void planks();
+
+
 
 private:
     Ui::constants *ui;
@@ -24,6 +28,8 @@ private slots:
 
     void on_pba_released();
     void on_pbb_released();
+    void on_pushButton_pressed();
+    void on_pushButton_2_pressed();
 };
 
 #endif // CONSTANTS_H
