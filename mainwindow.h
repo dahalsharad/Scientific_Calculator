@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "special.h"
+#include "constants.h"
+#include "uc.h"
 
 namespace Ui
 {
@@ -22,6 +24,12 @@ class MainWindow : public QMainWindow
 
         void CreateCalculatorWidget();
         Special *special;
+        uc *UC;
+        constants *Constants;
+    public slots:
+        void constantsSelect();
+        void ucSelect();
+        void planks();
 
 
     private slots:

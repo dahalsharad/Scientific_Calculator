@@ -49,3 +49,16 @@ void constants::on_pbb_released()
     mod_window();
 }
 
+
+void constants::on_pushButton_pressed()
+{
+
+}
+
+
+void constants::on_pushButton_2_pressed()//planks constant
+{
+    emit planks();
+    delete this;
+}
+

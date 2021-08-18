@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>516</width>
-    <height>380</height>
+    <width>525</width>
+    <height>370</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,32 +23,38 @@
     </rect>
    </property>
    <property name="title">
-    <string>a</string>
+    <string>Universal</string>
    </property>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>60</y>
-      <width>91</width>
+      <width>151</width>
       <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Planks Constant(h)</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>100</y>
-      <width>91</width>
+      <width>151</width>
       <height>30</height>
      </rect>
     </property>
+    <property name="minimumSize">
+     <size>
+      <width>151</width>
+      <height>30</height>
+     </size>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Grav Const(G)</string>
     </property>
    </widget>
   </widget>
@@ -57,12 +63,12 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>91</width>
+     <width>121</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>a</string>
+    <string>Universal</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pbb">
@@ -70,12 +76,12 @@
     <rect>
      <x>20</x>
      <y>50</y>
-     <width>91</width>
+     <width>121</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>b</string>
+    <string>Electromagnetic</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="gbb">
@@ -88,19 +94,19 @@
     </rect>
    </property>
    <property name="title">
-    <string>b</string>
+    <string>Electromagnetic</string>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>70</y>
-      <width>91</width>
+      <width>141</width>
       <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Nuc magne (μN)</string>
     </property>
    </widget>
   </widget>
