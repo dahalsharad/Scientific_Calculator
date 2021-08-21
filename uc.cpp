@@ -131,3 +131,11 @@ void uc::on_numSys_released()
 
 
 
+
+void uc::on_cm_m_released()
+{
+    emit cm_m();
+    delete this;
+}
+
+
