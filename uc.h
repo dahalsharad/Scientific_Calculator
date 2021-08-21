@@ -14,6 +14,8 @@ class uc : public QDialog
 public:
     explicit uc(QWidget *parent = nullptr);
     ~uc();
+signals:
+    void cm_m();
 private:
     Ui::uc *ui;
         void mw();
@@ -26,6 +28,7 @@ private slots:
     void on_speed_released();
 
 
+    void on_cm_m_released();
 };
 
 #endif // UC_H

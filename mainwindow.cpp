@@ -10,6 +10,7 @@ int dotStatus,loop;
 QString checktext;
 bool simplemode = true;
 bool complexmode = false;
+bool cmtom = false;
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -100,6 +101,14 @@ void MainWindow::planks()
 {
         ui->label->setText("6.62607004 × 10^(-34)");
 }
+void MainWindow::cm_m()
+{
+       QString newLabel;
+       newLabel =  " cm-m ";
+       ui->label->setText(newLabel);
+       cmtom = true;
+}
+
 
 void MainWindow::constantsSelect()
 {
@@ -110,7 +119,7 @@ void MainWindow::constantsSelect()
 void MainWindow::ucSelect()
 {
     UC = new uc(this);
-    //QObject::connect(special, SIGNAL(constantsSelect()), this, SLOT(constantsSelect()));//(uc ko lagi)
+    QObject::connect(UC, SIGNAL(cm_m()), this, SLOT(cm_m()));
     UC->show();
 }
 
@@ -121,8 +130,7 @@ void MainWindow::digit_pressed()
     double labelNumber;
     QString newLabel;
 
-    if((ui->pbSum->isChecked() || ui->pbSub->isChecked() || ui->pbMult->isChecked() || ui->pbDiv->isChecked() || ui->pbxn->isChecked() || ui->pbnroot->isChecked())
-        && (!userIsTypingSecondNumber))
+    if((ui->pbSum->isChecked() || ui->pbSub->isChecked() || ui->pbMult->isChecked() || ui->pbDiv->isChecked() || ui->pbxn->isChecked() || ui->pbnroot->isChecked() || cmtom ) && (!userIsTypingSecondNumber))
     {
         labelNumber = ( button->text()).toDouble();
         userIsTypingSecondNumber = true;
@@ -142,10 +150,9 @@ void MainWindow::digit_pressed()
 
     }
 
-    ui->label->setText(newLabel);        //
+    ui->label->setText(newLabel);
 
 
-    //  qDebug() << "test";               // qDebug is replacement for std::cout
 }
 
 void MainWindow::on_pbDot_released()
@@ -252,6 +259,13 @@ void MainWindow::on_pbEql_released()
         newLabel = QString::number(labelNumber, 'g', 15);
         ui->label->setText(newLabel);
         ui->pbnroot->setChecked(false);
+    }
+    else if(cmtom)
+    {
+        labelNumber = (secondNum/100);
+        newLabel = QString::number(labelNumber, 'g', 15);
+        ui->label->setText(newLabel);
+        cmtom=false;
     }
     userIsTypingSecondNumber = false;
 

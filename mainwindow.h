@@ -30,6 +30,7 @@ class MainWindow : public QMainWindow
         void constantsSelect();
         void ucSelect();
         void planks();
+        void cm_m();
 
 
     private slots:
